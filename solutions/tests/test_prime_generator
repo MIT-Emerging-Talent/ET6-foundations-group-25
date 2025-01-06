@@ -1,0 +1,44 @@
+import unittest
+from prime_generator import generate_primes, get_valid_input
+
+
+class TestPrimeGenerator(unittest.TestCase):
+    """Tests for the prime number generator and input validation functions."""
+
+    def test_generate_primes_valid(self):
+        """Test valid prime number generation."""
+        self.assertEqual(generate_primes(10), [2, 3, 5, 7])
+        self.assertEqual(generate_primes(2), [2])
+        self.assertEqual(generate_primes(20), [2, 3, 5, 7, 11, 13, 17, 19])
+
+    def test_generate_primes_invalid_limit(self):
+        """Test invalid limit for prime generation."""
+        with self.assertRaises(AssertionError):
+            generate_primes(1)  # Below valid range
+        with self.assertRaises(AssertionError):
+            generate_primes("ten")  # Non-numeric input
+        with self.assertRaises(AssertionError):
+            generate_primes(-5)  # Negative number
+
+    def test_get_valid_input(self):
+        """Test get_valid_input with valid and invalid inputs."""
+        # Since `input()` is used, this requires user simulation or mocking.
+        # Mocking would replace `input()` with predefined values for testing.
+        import builtins
+        original_input = builtins.input
+
+        # Test valid input
+        builtins.input = lambda _: "10"
+        self.assertEqual(get_valid_input("Enter a number: "), 10.0)
+
+        # Test invalid inputs (mocking a sequence of attempts)
+        attempts = iter(["-5", "abc", "2.5"])
+        builtins.input = lambda _: next(attempts)
+        self.assertEqual(get_valid_input("Enter a number: "), 2.5)
+
+        # Restore original input
+        builtins.input = original_input
+
+
+if __name__ == "__main__":
+    unittest.main()
