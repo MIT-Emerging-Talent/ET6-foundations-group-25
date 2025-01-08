@@ -13,6 +13,8 @@ created on 08/01/2025
 
 
 """
+
+
 def is_number_odd(number: int) -> bool:
     """
     The function takes an intger input from the user, validate the input,
@@ -21,7 +23,7 @@ def is_number_odd(number: int) -> bool:
 
     Parameters:
         number: the intger to be determined whether odd or not
-    
+
     Return:
         bool:
         True: if he number is odd
