@@ -9,13 +9,14 @@ Prime number generation rules:
     - A prime number is a natural number greater than 1 that is not divisible by any number other than 1 and itself.
 """
 
+
 def generate_primes(limit):
     """
     Generate a series of prime numbers up to a given limit.
 
     Args:
         limit (float): The upper limit up to which prime numbers are generated.
-    
+
     Returns:
         list: A list of prime numbers up to the specified limit.
 
@@ -23,7 +24,7 @@ def generate_primes(limit):
         AssertionError:
             - If 'limit' is not a float or integer.
             - If 'limit' is less than 2.
-    
+
     Example:
         >>> generate_primes(10)
         [2, 3, 5, 7]
@@ -51,14 +52,14 @@ def get_valid_input(prompt):
 
     Raises:
         AssertionError: If the prompt is not a string.
-    
+
     Example:
         >>> get_valid_input("Enter a number: ")
         # User enters 10
         10.0
     """
     assert isinstance(prompt, str), "Prompt must be a string"
-    
+
     while True:
         try:
             value = float(input(prompt))  # Accept input as float
@@ -68,6 +69,9 @@ def get_valid_input(prompt):
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
+
 if __name__ == "__main__":
     user_limit = get_valid_input("Enter the limit for prime numbers: ")
     print(f"Prime numbers up to {int(user_limit)}: {generate_primes(user_limit)}")
+    
+    
