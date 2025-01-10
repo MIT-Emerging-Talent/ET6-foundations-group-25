@@ -1,0 +1,6 @@
+[tool.ruff]
+exclude = [
+    "solutions/is_leap_year.py"  # Exclude nonexistent file
+]
+line-length = 88  # Optional: set a line-length limit
+select = ["E", "F", "W"]  # Optional: select specific error codes to check
