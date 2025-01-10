@@ -79,3 +79,9 @@ to write solid and detailed unit tests.
 
 - To Understand how to plan and execute projects on GitHub.
 - Transform Ideas into Programs
+
+### *Kefah Albashityalshaer*
+
+- Improve my programming skills in Python, especially in writing unit test programs
+- Mastering Code Review, making PRs, and the other GitHub teams' tasks.
+- Improve my communication with the team.
