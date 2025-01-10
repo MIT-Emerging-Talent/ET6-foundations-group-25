@@ -1,5 +1,9 @@
 import unittest
-from solutions.names_sorter import get_first_name, display_sorted_names
+
+from solutions.names_sorter import (
+    display_sorted_names,
+    get_first_name,
+)
 
 
 class TestNameSorting(unittest.TestCase):
@@ -36,7 +40,7 @@ class TestNameSorting(unittest.TestCase):
         with redirect_stdout(output):
             display_sorted_names(names_dict)
 
-        expected_output = "1. Arwa Yusif\n2. John Smith\n"
+        expected_output = "1. Arwa Yusif\\n2. John Smith\\n"
         self.assertEqual(output.getvalue(), expected_output)
 
     def test_display_sorted_names_tie(self):
@@ -50,7 +54,7 @@ class TestNameSorting(unittest.TestCase):
         with redirect_stdout(output):
             display_sorted_names(names_dict)
 
-        expected_output = "1. John Johnson\n2. John Smith\n"
+        expected_output = "1. John Johnson\\n2. John Smith\\n"
         self.assertEqual(output.getvalue(), expected_output)
 
     def test_display_sorted_names_empty(self):

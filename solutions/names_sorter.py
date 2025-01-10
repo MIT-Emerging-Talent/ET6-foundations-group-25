@@ -3,11 +3,13 @@ A module for sorting and displaying names from a dictionary based on first names
 The names of the team's members (Group-25) are the data utilized to run this program.
 
 Module contents:
-    - get_first_name(item): Extracts the first name from a dictionary item.
+    - get_first_name(item):
+      Extracts the first name from a dictionary item.
     - display_sorted_names(names_dict): Displays names sorted by first names.
 
 Sorting rules:
-    - Names are sorted alphabetically by first names, then by last names if first names are identical.
+    - Names are sorted alphabetically by first names,
+    - then by last names if first names are identical.
 """
 
 from typing import Dict, Tuple
@@ -39,11 +41,12 @@ def display_sorted_names(names_dict: Dict[str, str]) -> None:
     Display names in alphabetical order of first names.
 
     Args:
-        names_dict (Dict[str, str]): Dictionary with last names as keys and first names as values.
+        names_dict (Dict[str, str]): Dictionary with last names as keys and
+        first names as values.
     Returns:
         None. Prints names in format:
-            1. FirstName LastName
-            2. FirstName LastName
+        1. FirstName LastName
+        2. FirstName LastName
     """
     if not isinstance(names_dict, dict):
         raise TypeError("names_dict must be a dictionary")
