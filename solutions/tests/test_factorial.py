@@ -14,7 +14,7 @@ Author: Azza Ibrahim
 """
 
 import unittest
-from factorial import factorial
+from ..factorial import factorial
 
 
 class TestFactorial(unittest.TestCase):
