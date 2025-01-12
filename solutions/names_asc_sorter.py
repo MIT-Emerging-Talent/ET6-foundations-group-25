@@ -33,8 +33,7 @@ def extract_first_name(item: Tuple[str, str]) -> str:
         raise TypeError("Input item must be a tuple")
     if len(item) != 2:
         raise ValueError(
-            "Input tuple must contain exactly two elements "
-            "(last_name, first_name)"
+            "Input tuple must contain exactly 2 elements(last_name, first_name)"
         )
     return item[1]
 

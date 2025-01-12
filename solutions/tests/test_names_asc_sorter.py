@@ -34,9 +34,8 @@ class TestNameSorting(unittest.TestCase):
 
         # Should raise ValueError when tuple does not have exactly two elements
         with self.assertRaises(ValueError):
-            get_first_name(
-                ("Smith",)
-            )  # Invalid: Tuple with fewer than 2 elements
+            get_first_name(("Smith",))
+        # Invalid: Tuple with fewer than 2 elements
         with self.assertRaises(ValueError):
             get_first_name(
                 ("Smith", "John", "Extra")
@@ -55,7 +54,9 @@ class TestNameSorting(unittest.TestCase):
         self.assertEqual(output.getvalue(), expected_output)
 
     def test_display_sorted_names_tie(self):
-        """Test display_sorted_names when duplicate first names are present."""
+        """
+        Test display_sorted_names when duplicate first names are present.
+        """
         # Should sort by last name when first names are identical
         names_dict = {"Smith": "John", "Johnson": "John"}
 
@@ -82,9 +83,8 @@ class TestNameSorting(unittest.TestCase):
         """Test display_sorted_names with invalid inputs."""
         # Should raise TypeError for non-dictionary inputs
         with self.assertRaises(TypeError):
-            display_sorted_names(
-                ["Smith", "John"]
-            )  # Invalid: Not a dictionary
+            display_sorted_names(["Smith", "John"])
+        # Invalid: Not a dictionary
         with self.assertRaises(TypeError):
             display_sorted_names({"Smith": 123})  # Invalid: Non-string value
         with self.assertRaises(TypeError):
