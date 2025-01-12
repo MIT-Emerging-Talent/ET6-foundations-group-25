@@ -10,17 +10,19 @@ created on 9 Jan 2025
 Author: Azza Ibrahim
 
 """
+
+
 def factorial(number: int) -> int:
     """
     A function computes a factorial of a number
 
     parameters :
-    Number (int) : the number to compute its factorial 
+    Number (int) : the number to compute its factorial
 
     Return:
     int : THE fsctorial of the inpiut number
 
-    Raises: 
+    Raises:
     ValueError: Factotial is only defined for positive numbers
 
     """
@@ -31,7 +33,7 @@ def factorial(number: int) -> int:
         raise ValueError("Factotial is only defined for positive numbers")
 
     res = 1
-    for i f in range (2, number + 1):
+    for f in range(2, number + 1):
         res *= f
 
-    return res 
+    return res
