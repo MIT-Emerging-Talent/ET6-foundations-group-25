@@ -1,9 +1,11 @@
 """
-A module for sorting and displaying names from a dictionary based on first names.
-The names of the team's members (Group-25) are the data utilized to run this program.
+A module for sorting and displaying names from a dictionary based on
+first names.
+The names of the team's members (Group-25) are the data utilized to
+run this program.
 
 Module contents:
-    - get_first_name(item):
+    - extract_first_name(item):
       Extracts the first name from a dictionary item.
     - display_sorted_names(names_dict): Displays names sorted by first names.
 
@@ -15,7 +17,7 @@ Sorting rules:
 from typing import Dict, Tuple
 
 
-def get_first_name(item: Tuple[str, str]) -> str:
+def extract_first_name(item: Tuple[str, str]) -> str:
     """
     Extract the first name from a dictionary item.
 
@@ -31,9 +33,22 @@ def get_first_name(item: Tuple[str, str]) -> str:
         raise TypeError("Input item must be a tuple")
     if len(item) != 2:
         raise ValueError(
-            "Input tuple must contain exactly two elements (last_name, first_name)"
+            "Input tuple must contain exactly two elements "
+            "(last_name, first_name)"
         )
     return item[1]
+
+
+def get_first_name(item: Tuple[str, str]) -> str:
+    """
+    Get the first name from a tuple containing (last_name, first_name).
+
+    Args:
+        item (Tuple[str, str]): A tuple containing (last_name, first_name).
+    Returns:
+        str: The first name.
+    """
+    return extract_first_name(item)
 
 
 def display_sorted_names(names_dict: Dict[str, str]) -> None:
@@ -43,10 +58,6 @@ def display_sorted_names(names_dict: Dict[str, str]) -> None:
     Args:
         names_dict (Dict[str, str]): Dictionary with last names as keys and
         first names as values.
-    Returns:
-        None. Prints names in format:
-        1. FirstName LastName
-        2. FirstName LastName
     """
     if not isinstance(names_dict, dict):
         raise TypeError("names_dict must be a dictionary")
@@ -68,6 +79,7 @@ def display_sorted_names(names_dict: Dict[str, str]) -> None:
 
 # Define group names, then main block
 group_names = {
+    # spell-checker: disable
     "Abd Elraheem": "Amin",
     "Mohammed": "Razan",
     "Seedahmed": "Abdalrahman",
@@ -78,6 +90,7 @@ group_names = {
     "Alaa": "Mohamed",
     "Albashityalshaer": "Kefah",
     "Makki": "Mohamed",
+    # spell-checker: enable
 }
 
 if __name__ == "__main__":
