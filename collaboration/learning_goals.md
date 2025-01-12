@@ -85,3 +85,9 @@ to write solid and detailed unit tests.
 - Improve my programming skills in Python, especially in writing unit test programs
 - Mastering Code Review, making PRs, and the other GitHub teams' tasks.
 - Improve my communication with the team.
+
+### *Tamir El-Waleed*
+
+- Improve my testing skills, in addition to mastering basic Git & Github behavior.
+- Create a complete project from scratch, building my portfolio in the process.
+  
