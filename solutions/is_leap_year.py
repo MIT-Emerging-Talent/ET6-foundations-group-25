@@ -41,8 +41,8 @@ def is_leap_year(year: int) -> bool:
     """
 
     assert isinstance(year, int), "year must be an integer"
-    assert (
-        year >= 1583
-    ), "year must be greater than or equal to 1583 (1582 is start of Gregorian Calendar)"
+    assert year >= 1583, (
+        "year must be greater than or equal to 1583 (1582 is start of Gregorian Calendar)"
+    )
 
     return (year % 4 == 0) and (year % 100 != 0 or year % 400 == 0)
