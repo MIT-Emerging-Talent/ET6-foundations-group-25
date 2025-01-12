@@ -29,7 +29,7 @@ class TestFactorial(unittest.TestCase):
     def test_factorial_zero(self):
         """TEst factorial functipn fo input of zero"""
         self.assertEqual(factorial(0), 1)
- 
+
     def test_factorail_one(self):
         """test factorial for input one"""
         self.assertEqual(factorial(1), 1)
@@ -46,7 +46,7 @@ class TestFactorial(unittest.TestCase):
     def test_non_intger(self):
         """test case for non intger input"""
         with self.assertRaises(TypeError):
-            factorail(5.5)
+            factorial(5.5)
 
 
 if __name__ == "__main__":
