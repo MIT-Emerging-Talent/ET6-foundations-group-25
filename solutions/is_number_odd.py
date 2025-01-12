@@ -44,11 +44,11 @@ def is_number_odd(number: int) -> bool:
         Input must be an intger
 
     """
-    assert isinstance(number, int), "Input must be an intger"
-    if not number:
+    if number is None:
         raise ValueError("Input cannot be empty")
+    if isinstance(number, bool):
+        raise AssertionError("Input must be an integer, not a boolean")
+    assert isinstance(number, int), "Input must be an integer"
+    return number % 2 != 0
+   
 
-    if number % 2 != 0:
-        return True  # Odd
-    else:
-        return False  # Not odd (even)
