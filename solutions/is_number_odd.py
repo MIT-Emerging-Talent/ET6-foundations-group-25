@@ -50,5 +50,3 @@ def is_number_odd(number: int) -> bool:
         raise AssertionError("Input must be an integer, not a boolean")
     assert isinstance(number, int), "Input must be an integer"
     return number % 2 != 0
-   
-
