@@ -30,18 +30,18 @@ class TestFactorial(unittest.TestCase):
         """TEst factorial functipn fo input of zero"""
         self.assertEqual(factorial(0), 1)
 
-    def test_factorail_one(self):
+    def test_factorial_one(self):
         """test factorial for input one"""
         self.assertEqual(factorial(1), 1)
 
-    def test_factorail_large(self):
+    def test_factorial_large(self):
         """test factorail for large input number"""
-        self.assertEqual(factorail(11), 39916800)
+        self.assertEqual(factorial(11), 39916800)
 
     def test_negative(self):
         """test negative input will raise error"""
         with self.assertRaises(ValueError):
-            factorail(-3)
+            factorial(-3)
 
     def test_non_intger(self):
         """test case for non intger input"""
